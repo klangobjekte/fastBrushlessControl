@@ -14,4 +14,17 @@ OTHER_FILES += \
     fastBrushlessControl.ino
 
 HEADERS += \
-    motorControl.h
+    motorControl.h \
+    variables.h \
+    definitions.h \
+    Timer1.h
+
+include $(ARDUINO_DIR)/Arduino.mk
+
+        INCLUDEPATH += /usr/local/include
+        LIBS += -L/usr/local/lib
+
+        INCLUDEPATH += /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/include
+        #INCLUDEPATH += /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/avr-g++
+
+        LIBS = /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib
